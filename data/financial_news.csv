@@ -1,0 +1,11 @@
+news,pos,neg
+"Company reports strong earnings, stock price jumps 15%",0.9,0.09999999999999998
+Stock market reaches all-time high as investor confidence soars,0.85,0.15000000000000002
+"Tech company announces revolutionary new product, shares surge",0.8,0.19999999999999996
+"Economic growth beats expectations by wide margin, outlook positive",0.95,0.050000000000000044
+"Company successfully acquires competitor, creating market leader",0.75,0.25
+"Market crashes amid severe recession fears, worst day in years",0.09999999999999998,0.9
+Company announces massive layoffs following disastrous earnings,0.15000000000000002,0.85
+"Tech giant faces regulatory investigation, stock plummets",0.19999999999999996,0.8
+Oil prices collapse as demand forecasts deteriorate,0.050000000000000044,0.95
+"CEO resigns amid accounting scandal, shares in freefall",0.25,0.75
