@@ -1,0 +1,106 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.pytest_cache/
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.env/
+.anaconda/
+.conda/
+
+# Data files - can be large and often should be kept out of git
+/data/
+*.csv
+*.tsv
+*.json
+*.xml
+*.xls
+*.xlsx
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+notebooks/.ipynb_checkpoints/
+
+# Model files - often large and generated from code
+*.h5
+*.hdf5
+*.pkl
+*.joblib
+*.onnx
+/models/
+saved_models/
+
+# MLflow artifacts
+mlruns/
+mlartifacts/
+
+# Logs and temporary files
+logs/
+*.log
+tmp/
+.temp/
+*.swp
+*.swo
+
+# IDE settings
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.project
+.spyproject
+.spyderproject
+.ropeproject
+.DS_Store
+
+# Environment variables (may contain secrets)
+.env
+.env.local
+.secrets
+credentials.json
+
+# Docker
+.docker/
+docker-compose.override.yml
+
+# Test coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+
+# Streamlit specific
+.streamlit/
+
+# Local files and notes
+/local/
+notes.md
+TODO.md
+NOTES.txt
