@@ -21,3 +21,4 @@ def test_predict_sentiment(mock_model, mock_tokenizer, sample_news_data):
     # The predict_sentiment function returns an array, not a dictionary
     assert results.shape[1] >= 2  # Should have at least positive and negative columns
     assert len(results) == len(sample_news_data)
+    
