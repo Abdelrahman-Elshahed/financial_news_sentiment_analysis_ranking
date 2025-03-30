@@ -239,3 +239,4 @@ def test_model_examples(model, tokenizer, max_length=100, model_type='lstm'):
             })
     
     return results
+
