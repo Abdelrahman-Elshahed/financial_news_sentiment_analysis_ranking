@@ -1,0 +1,16 @@
+artifact_uri: file:///D:/College/Qafza/News_Sentiment_Analysis_Project/mlruns/707428814121595128/aa60bdd69b954bc888ee738d37bf1591/artifacts
+deleted_time: 1743371636869
+end_time: 1743370607640
+entry_point_name: ''
+experiment_id: '707428814121595128'
+lifecycle_stage: deleted
+run_id: aa60bdd69b954bc888ee738d37bf1591
+run_name: LogisticRegression_features1000_C1.0
+run_uuid: aa60bdd69b954bc888ee738d37bf1591
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743370604671
+status: 3
+tags: []
+user_id: Abdelrahman ElShahed

@@ -1,0 +1,16 @@
+artifact_uri: file:///D:/College/Qafza/News_Sentiment_Analysis_Project/mlruns/707428814121595128/70bb91bf538944bf997936295fac1158/artifacts
+deleted_time: 1743371636870
+end_time: 1743371080772
+entry_point_name: ''
+experiment_id: '707428814121595128'
+lifecycle_stage: deleted
+run_id: 70bb91bf538944bf997936295fac1158
+run_name: BiLSTM_units64_dropout0.2
+run_uuid: 70bb91bf538944bf997936295fac1158
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743371070598
+status: 3
+tags: []
+user_id: Abdelrahman ElShahed
