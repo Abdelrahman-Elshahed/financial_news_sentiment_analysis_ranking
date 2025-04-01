@@ -123,12 +123,14 @@ This directory contains tests for the Financial News Sentiment Analysis & Rankin
 
    - Run the combined service (API + Streamlit)
      ```bash
-     python -m deployment.run
+     cd deployment
+     python run.py
      ```
   - Or run them separately
        ```bash
-    uvicorn deployment.app:app --host 0.0.0.0 --port 8000
-    streamlit run deployment/streamlit_app.py
+    cd deployment
+    uvicorn app:app --host 0.0.0.0 --port 8000
+    streamlit run streamlit_app.py
      ```
 
 ![Image](https://github.com/user-attachments/assets/becabe10-2360-41d6-ab03-44d69075fb1d)
