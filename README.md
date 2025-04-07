@@ -169,7 +169,20 @@ This directory contains tests for the Financial News Sentiment Analysis & Rankin
 
   
   ### Docker image on Docker Hub [Click Here](https://hub.docker.com/repository/docker/bodaaa/financial-news-sentiment/general).
-  
+  ## 🔧 Usage
+
+Pull the image:
+
+```bash
+docker pull bodaaa/financial-news-sentiment:latest
+```
+Run the container:
+
+
+```
+docker run -p 8000:8000 -p 8501:8501 bodaaa/financial-news-sentiment:latest
+```
+
   ![Image](https://github.com/user-attachments/assets/d9be4a43-ca71-4fb6-81a0-d7b85c3cd664)
 
 ## MLflow Integration and DagsHub
