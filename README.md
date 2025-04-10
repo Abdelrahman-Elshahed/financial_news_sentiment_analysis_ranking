@@ -1,6 +1,6 @@
 # Financial News Sentiment Analysis & Ranking
 
-This project implements a comprehensive solution for analyzing sentiment in financial news and ranking articles based on their financial importance. It uses deep learning models (LSTM with BERT embeddings) and traditional machine learning approaches (Logistic Regression) to predict sentiment scores for news articles.
+This project implements a comprehensive solution for analyzing sentiment in financial news and ranking articles based on their financial importance. It uses deep learning models (LSTM with BERT embeddings) and traditional machine learning approaches (Logistic Regression) to predict sentiment scores for news articles. The system is containerized for deployment and can be easily deployed to Azure Container Apps for scalable cloud hosting.
 
 
 
@@ -15,12 +15,13 @@ This project implements a comprehensive solution for analyzing sentiment in fina
   - [Run with Streamlit Application](#run-with-streamlit-application)
   - [API Usage and PostmanAPI Testing](#api-usage-and-postmanapi-testing)
   - [Dockerization](#dockerization)
+  - [Azure Deployment](#azure-deployment)
   - [MLflow Integration and DagsHub](#mlflow-integration-and-dagshub)
 
 
 ## Overview
 
-This project analyzes financial news articles to determine sentiment (positive, negative, neutral) and ranks companies based on their news sentiment scores. By processing real-time news data, the system provides valuable insights for investors and financial analysts to make informed decisions.
+This project analyzes financial news articles to determine sentiment (positive, negative, neutral) and ranks companies based on their news sentiment scores. By processing real-time news data, the system provides valuable insights for investors and financial analysts to make informed decisions. The application architecture supports both local deployment via Docker and cloud deployment through Azure Container Apps for production environments.
 
 
 
@@ -185,6 +186,17 @@ docker run -p 8000:8000 -p 8501:8501 bodaaa/financial-news-sentiment:latest
 ```
 
   ![Image](https://github.com/user-attachments/assets/d9be4a43-ca71-4fb6-81a0-d7b85c3cd664)
+  
+## Azure Deployment
+
+The application is deployed on Azure Container Apps for scalable cloud hosting with public access. Azure Container Apps provides a fully managed serverless container service that enables you to run microservices and containerized applications on a serverless platform. The deployment exposes both the FastAPI backend (port 8000) and Streamlit frontend (port 8501) through a single public endpoint.
+
+### Visit the deployed application at: https://financial-news-sentiment.jollymushroom-663aaf82.westus2.azurecontainerapps.io/
+
+![Image](https://github.com/user-attachments/assets/6cd20556-fe34-4d5b-af18-a62172f8a732)
+
+![Image](https://github.com/user-attachments/assets/11916cc7-ea1d-4c3e-a7ea-0d29788244cf)
+![Image](https://github.com/user-attachments/assets/9ab211fe-31b5-4d02-bd72-7104d93ef85a)
 
 ## MLflow Integration and DagsHub
 
