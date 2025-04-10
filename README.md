@@ -132,6 +132,7 @@ This directory contains tests for the Financial News Sentiment Analysis & Rankin
     uvicorn app:app --host 0.0.0.0 --port 8000
     streamlit run streamlit_app.py
      ```
+   - The application will be available at [http://localhost:8501](http://localhost:8501/).
 
 ![Image](https://github.com/user-attachments/assets/becabe10-2360-41d6-ab03-44d69075fb1d)
 
