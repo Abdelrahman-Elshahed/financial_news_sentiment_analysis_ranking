@@ -147,29 +147,7 @@ def build_logistic_regression_model():
     return model
 
 def build_sentiment_model(vocab_size, embedding_dim, max_length, lstm_units=128, dropout_rate=0.2, embedding_matrix=None):
-    """
-    Build a sentiment analysis model with customizable parameters.
-    This is a wrapper around build_binary_lstm_model.
-    
-    Parameters:
-    -----------
-    vocab_size: int
-        Size of the vocabulary
-    embedding_dim: int
-        Dimension of word embeddings
-    max_length: int
-        Maximum sequence length
-    lstm_units: int
-        Number of units in LSTM layers
-    dropout_rate: float
-        Dropout rate for regularization
-    embedding_matrix: numpy.ndarray, optional
-        Pre-trained embedding matrix
-        
-    Returns:
-    --------
-    tensorflow.keras.Model
-    """
+
     import tensorflow as tf
     
     # Input layer

@@ -213,33 +213,7 @@ def save_models(lstm_model=None, logreg_model=None, tokenizer=None, target_scale
 from src.experiment_tracking import setup_mlflow, log_model_training, log_prediction_results
 
 def train_sentiment_model(X_train, y_train, X_val, y_val, X_test=None, y_test=None, **kwargs):
-    """
-    Train a sentiment analysis model and track with MLflow
-    
-    Parameters:
-    -----------
-    X_train: numpy.ndarray
-        Training features
-    y_train: numpy.ndarray
-        Training labels
-    X_val: numpy.ndarray
-        Validation features
-    y_val: numpy.ndarray
-        Validation labels
-    X_test: numpy.ndarray, optional
-        Test features
-    y_test: numpy.ndarray, optional
-        Test labels
-    **kwargs: 
-        Additional parameters for model configuration
-        
-    Returns:
-    --------
-    model: tf.keras.Model
-        Trained model
-    history: tf.keras.callbacks.History
-        Training history
-    """
+
     # Setup MLflow
     from src.experiment_tracking import setup_mlflow
     mlflow = setup_mlflow()
@@ -326,31 +300,7 @@ def train_sentiment_model(X_train, y_train, X_val, y_val, X_test=None, y_test=No
     return model, history
 
 def train_logistic_regression_with_tracking(X_train, y_train, X_val, y_val, X_test=None, y_test=None, **kwargs):
-    """
-    Train a logistic regression model with MLflow tracking
-    
-    Parameters:
-    -----------
-    X_train: array-like
-        Training features
-    y_train: array-like
-        Training labels
-    X_val: array-like
-        Validation features
-    y_val: array-like
-        Validation labels
-    X_test: array-like, optional
-        Test features
-    y_test: array-like, optional
-        Test labels
-    **kwargs: dict
-        Additional parameters
-        
-    Returns:
-    --------
-    model: sklearn Pipeline
-        Trained logistic regression model
-    """
+
     # Setup MLflow
     from src.experiment_tracking import setup_mlflow
     mlflow = setup_mlflow()

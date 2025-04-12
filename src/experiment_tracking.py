@@ -15,20 +15,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 def setup_mlflow(experiment_name="news_sentiment_analysis", use_local=False):
-    """
-    Configure MLflow tracking URI and authenticate with DagsHub
-    
-    Parameters:
-    -----------
-    experiment_name: str
-        Name of the experiment
-    use_local: bool
-        Whether to use local tracking instead of DagsHub
-        
-    Returns:
-    --------
-    mlflow instance
-    """
+
     if use_local:
         print("Using local MLflow tracking")
         # Set local tracking URI
@@ -76,22 +63,7 @@ def setup_mlflow(experiment_name="news_sentiment_analysis", use_local=False):
     return mlflow
 
 def log_model_training(model, history, hyperparams, metrics=None, model_name="sentiment_model"):
-    """
-    Log model training results to MLflow
-    
-    Parameters:
-    -----------
-    model: Keras model
-        The trained model
-    history: History object
-        Training history from model.fit()
-    hyperparams: dict
-        Model hyperparameters
-    metrics: dict
-        Additional metrics to log
-    model_name: str
-        Name to save the model under
-    """
+
     with mlflow.start_run():
         # Log hyperparameters
         mlflow.log_params(hyperparams)
@@ -117,18 +89,7 @@ def log_model_training(model, history, hyperparams, metrics=None, model_name="se
         os.remove(model_summary_path)  # Clean up
 
 def log_prediction_results(y_true, y_pred, class_names=None):
-    """
-    Log prediction metrics and confusion matrix
-    
-    Parameters:
-    -----------
-    y_true: array-like
-        True labels
-    y_pred: array-like
-        Predicted labels
-    class_names: list
-        Names of classes
-    """
+
     import numpy as np
     from sklearn.metrics import classification_report, confusion_matrix
     import matplotlib.pyplot as plt
