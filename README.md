@@ -1,7 +1,6 @@
 # Financial News Sentiment Analysis & Ranking
 
-This project implements a comprehensive solution for analyzing sentiment in financial news and ranking articles based on their financial importance. It uses deep learning models (LSTM with BERT embeddings) and traditional machine learning approaches (Logistic Regression) to predict sentiment scores for news articles. The system is containerized for deployment and can be easily deployed to Azure Container Apps for scalable cloud hosting.
-
+This project implements a comprehensive solution for analyzing sentiment in financial news and ranking articles based on their financial importance. It uses deep learning models (LSTM with BERT embeddings) and traditional machine learning approaches (Logistic Regression) to predict sentiment scores for news articles. The system is containerized for deployment, easily deployed to Azure Container Apps for scalable cloud hosting, and features CI/CD integration with GitHub Actions for automated testing and quality assurance.
 
 
 ## Table of Contents
@@ -12,6 +11,7 @@ This project implements a comprehensive solution for analyzing sentiment in fina
   - [Primary Model Architecture](#primary-model-architecture)
   - [Setup](#setup)
   - [Test Suite](#test-suite)
+  - [Continuous Integration](#continuous-integration)
   - [Run with Streamlit Application](#run-with-streamlit-application)
   - [API Usage and PostmanAPI Testing](#api-usage-and-postmanapi-testing)
   - [Dockerization](#dockerization)
@@ -21,7 +21,7 @@ This project implements a comprehensive solution for analyzing sentiment in fina
 
 ## Overview
 
-This project analyzes financial news articles to determine sentiment (positive, negative, neutral) and ranks companies based on their news sentiment scores. By processing real-time news data, the system provides valuable insights for investors and financial analysts to make informed decisions. The application architecture supports both local deployment via Docker and cloud deployment through Azure Container Apps for production environments.
+This project analyzes financial news articles to determine sentiment (positive, negative, neutral) and ranks companies based on their news sentiment scores. By processing real-time news data, the system provides valuable insights for investors and financial analysts to make informed decisions. The application architecture supports both local deployment via Docker and cloud deployment through Azure Container Apps for production environments. Additionally, the project implements continuous integration through GitHub Actions workflows that automatically run tests on code changes, ensuring code quality and functionality across the entire application.
 
 
 
@@ -119,6 +119,26 @@ This directory contains tests for the Financial News Sentiment Analysis & Rankin
 
 
 
+## Continuous Integration
+
+This project employs GitHub Actions for continuous integration, automatically running tests on every push and pull request to ensure code quality and functionality. The CI pipeline executes the complete test suite using pytest, validating the core components of the application:
+
+
+  - Data loading and preprocessing functionality
+  - Text preprocessing utilities
+  - Sentiment analysis prediction accuracy
+
+
+The workflow is configured in `ci-tests.yml` and verifies that all tests pass before code is merged into the main branch. This automated testing approach helps catch issues early in the development process and ensures consistent functionality across all components of the sentiment analysis system.
+
+![Image](https://github.com/user-attachments/assets/3f95b653-1041-47a4-826d-286267abf6cb)
+
+  - To run tests locally:
+
+  ```bash
+# From the project root
+python -m pytest tests/
+  ```
 
 ## Run with Streamlit Application
 
@@ -220,5 +240,3 @@ Access the MLflow UI to compare different model configurations and results.
 ![Image](https://github.com/user-attachments/assets/ed4768c8-0ab6-486d-a429-f5f192cd49b1)
 
 
-
-![Image](https://github.com/user-attachments/assets/70782edf-4538-46b3-8774-34d2a270eb41)
